@@ -1,0 +1,56 @@
+/* register.component.css */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333; /* Dark text color for contrast */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure container covers full viewport height */
+}
+
+.form-area {
+  width: 70%; /* Set the width to 70% of the parent container */
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent background for better readability */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin: 10px 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the button */
+  margin-top: 20px;
+}
+
+.button-container .btn {
+  width: auto; /* Button width will adjust based on its content */
+  padding: 10px 20px; /* Adjust padding for better appearance */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-area {
+    width: 90%; /* Adjust width for smaller screens */
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-area {
+    width: 100%; /* Adjust width for very small screens */
+    padding: 15px;
+  }
+}

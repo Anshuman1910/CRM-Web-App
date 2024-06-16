@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <h3 class="text-center">Users List</h3>
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <table class="table table-striped table-hover custom-table">
+        <thead class="thead-dark">
+          <tr>
+            <th class="text-justify">Name</th>
+            <th class="text-justify">Email</th>
+            <th class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td class="text-justify">{{ user.name }}</td>
+            <td class="text-justify">{{ user.email }}</td>
+            <td class="text-right">
+              <button class="btn btn-info action-btn" (click)="viewUserDetails(user._id)">Details</button>
+              <button class="btn btn-danger action-btn" (click)="deleteUser(user._id)">Delete</button>
+              <button class="btn btn-warning action-btn" (click)="openAssignRoleModal(user._id)">Assign Role</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

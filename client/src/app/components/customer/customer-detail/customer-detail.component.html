@@ -1,0 +1,19 @@
+<div class="container mt-4" *ngIf="user">
+  <h3 class="text-center">User Details</h3>
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <p><strong>Name:</strong> {{ user.name }}</p>
+          <p><strong>Email:</strong> {{ user.email }}</p>
+          <p><strong>Contact No:</strong> {{ user.contact_no }}</p>
+        </div>
+        <div class="col-md-6">
+          <p><strong>Admin:</strong> {{ user.isAdmin ? 'Yes' : 'No' }}</p>
+          <p><strong>Joined:</strong> {{ user.date | date }}</p>
+          <p><strong>Role: </strong>{{user.role ? user.role : 'No role assigned'}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

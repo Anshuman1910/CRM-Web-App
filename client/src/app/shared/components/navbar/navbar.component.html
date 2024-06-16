@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">Home</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed"
+      aria-controls="navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse justify-content-end"
+      id="navbarNav"
+      [class.show]="!isCollapsed"
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item" *ngIf="!isLoggedIn">
+          <a
+            class="nav-link nav-button"
+            routerLink="/login"
+            (click)="isCollapsed = true"
+            >Login</a
+          >
+        </li>
+        <li class="nav-item" *ngIf="!isLoggedIn">
+          <a
+            class="nav-link nav-button"
+            routerLink="/register"
+            (click)="isCollapsed = true"
+            >Register</a
+          >
+        </li>
+        <!-- Add the Details button for non-admin users -->
+        <li class="nav-item" *ngIf="isLoggedIn && !isAdmin">
+          <a
+            class="nav-link nav-button"
+            (click)="onDetailsClick()"
+            >Details</a
+          >
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a
+            class="nav-link nav-button"
+            [routerLink]="isAdmin ? '/customer-list' : '/dashboard/' + userId"
+            (click)="isCollapsed = true"
+          >
+            {{ isAdmin ? "Users List" : "Dashboard" }}
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link nav-button" (click)="logout(); isCollapsed = true"
+            >Logout</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

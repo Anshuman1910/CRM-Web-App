@@ -1,0 +1,54 @@
+.container {
+  margin-top: 20px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 80%;
+}
+
+.activity-form {
+  margin-bottom: 20px;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 10px;
+}
+
+.activity-attributes {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.btn-success {
+  background-color: rgba(219, 134, 43, 0.571); /* Change to yellow for 'pending' status */
+  color: black;
+  font-weight: bold;
+}
+
+.btn-completed {
+  background-color: green; /* Change to green for 'completed' status */
+  color: white;
+  font-weight: bold;
+}
+
+#addActivity{
+  margin-top: 10px;
+}

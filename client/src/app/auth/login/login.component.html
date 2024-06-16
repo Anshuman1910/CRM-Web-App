@@ -1,0 +1,39 @@
+<!-- login.component.html -->
+<div class="login-page" [style.backgroundImage]="'url(' + backgroundUrl + ')'">
+  <div class="container d-flex justify-content-center align-items-center">
+    <div class="form-area">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>Email</label>
+          <input
+            type="text"
+            placeholder="Email"
+            class="form-control"
+            name="email"
+            formControlName="email"
+          >
+          <div class="alert alert-danger" *ngIf="Email.touched && Email.invalid">
+            <div *ngIf="Email.errors?.required">Email is required</div>
+            <div *ngIf="Email.errors?.pattern">Invalid Email</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="Password"
+            class="form-control"
+            name="password"
+            formControlName="password"
+          >
+          <div class="alert alert-danger" *ngIf="Password.touched && Password.invalid">
+            <div *ngIf="Password.errors?.required">Password is required</div>
+          </div>
+        </div>
+        <div class="button-container">
+          <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

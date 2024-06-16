@@ -1,0 +1,30 @@
+.custom-table {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.thead-dark th {
+  text-align: center;
+}
+
+tbody .text-justify {
+  text-align: center;
+}
+
+.action-btn {
+  margin-right: 10px;
+}
+
+.action-btn:last-child {
+  margin-right: 0;
+}
+
+td.text-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+table.table {
+  width: 100%;
+}
