@@ -8,7 +8,7 @@ import { OnInit } from '@angular/core';
 })
 export class ActivityService implements OnInit{
 
-  private apiUrl = 'http://localhost:5000/api/activities';
+  private apiUrl = 'https://crm-app-va2d.onrender.com/api/activities';
 
   constructor(private http: HttpClient, private authService: AuthService) { }
 
