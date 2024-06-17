@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CustomerService {
-  private apiUrl = 'http://localhost:5000/api';
+  private apiUrl = 'https://crm-app-va2d.onrender.com/api';
 
   constructor(private http: HttpClient) { }
 
