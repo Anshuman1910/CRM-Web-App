@@ -14,7 +14,7 @@ interface LoginResponse {
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'https://crm-app-va2d.onrender.com';
+  private apiUrl = 'https://crm-app-va2d.onrender.com/api';
   private loggedInSubject: BehaviorSubject<boolean>;
   private adminSubject: BehaviorSubject<boolean>;
 
